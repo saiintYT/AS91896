@@ -1,12 +1,15 @@
-# functions
+"""This file calculates the most cost effective ingredient for them."""
+# functions within the code
 def budget(question):
+    # getting users budget
 
     while True:
-        response = int(input('Budget: '))
-        
+        response = input('What is your budget: ')
+        response = float(response)
+
         if response < 1.65:
             print("Your budget is too low, please enter a higher number.")
-                
+
         elif response > 5:
             print("Your budget is too high, please enter a lower number.")
 
@@ -16,11 +19,4 @@ def budget(question):
         else:
             print("Please enter a valid number 1.65 - 5.")
 
-
 # main routine
-
-# getting users budget
-while True:
-    question = budget("Budget: ")
-
-    if budget == 1.65 to 5:
