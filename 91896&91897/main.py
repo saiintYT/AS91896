@@ -1,7 +1,11 @@
-"""This file calculates the most cost effective ingredient for them."""
 # functions within the code
-def budget(question):
+
+
 # getting users budget
+
+
+def budget(question):
+
 
     while True:
         response = input('What is your budget: ')
@@ -14,11 +18,9 @@ def budget(question):
             print("Your budget is too high, please enter a lower number.")
 
         elif response >= 1.65 or response <= 20:
-            continue
-
-        else:
             print("Please enter a valid number 1.65 - 20.")
-            
+            break
+
 def product_name(question):
     # getting users product name
 
@@ -28,17 +30,26 @@ def product_name(question):
         print("Added, were there anymore? ")
 
         if response_pn == "yes".lower or "y".lower:
-    elif response_pn == int:
-        print("Please only characters in the english alphabet.")
+            return "yes"
+        
+        elif response_pn == int:
+            print("Please only characters in the english alphabet.")
 
-def weight_g(question):
-    # gettins users weight in grams
-def weight_kg
-def cost
-def unit_price
+        elif response_pn == "no".lower or "n".lower:
+            return "no"
 
- 
+    if response_pn == "yes":
+        print(product_name)
+
+
+#def weight_g(question):
+    # getting users weight in grams
+#def weight_kg
+#def cost
+#def unit_price
+
+
 
 # main routine
 
-print(" ")
+print("Hi")
