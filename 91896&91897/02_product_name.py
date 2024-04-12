@@ -1,21 +1,23 @@
 def product_name(question):
     # getting users product name
 
-    response_pn = input(question)
+    while True:
 
-    if response_pn == str:
-        print("Added, were there anymore? ")
+        response_pn = input(question)
 
-        if response_pn == "yes".lower or "y".lower:
+        if response_pn.isalpha():
+            print("Added, were there anymore? ")
+
+            if response_pn.lower() == "yes" or response_pn.lower() == "y":
                 return "yes"
-        
-    elif response_pn == int:
-            print("Please only characters in the english alphabet.")
+            
+        else:
+            print("Please only characters in the English alphabet.")
 
-            if response_pn == "no".lower or "n".lower:
+            if response_pn.lower() == "no" or response_pn.lower() == "n":
                 return "no"
 
-    if response_pn == "yes":
-        print(product_name)
+        if response_pn.lower() == "yes":
+            print(product_name)
 
 product_name("List your product's name: ")
