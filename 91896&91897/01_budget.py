@@ -14,5 +14,8 @@ def budget(question):
 
         elif response >= 1.65 or response <= 20:
             break
-
+        
+        else:
+            print("Only enter integers.")
+            
 budget("What is your budget: ")

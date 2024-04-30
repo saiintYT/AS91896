@@ -10,14 +10,19 @@ def product_name(question):
 
             if response_pn.lower() == "yes" or response_pn.lower() == "y":
                 return "yes"
+        
+        elif response_pn.lower() == "yes":
+            print(product_name)
             
+        elif response_pn.lower() == "no":
+            print("All product names have been added.")
+        
         else:
             print("Please only characters in the English alphabet.")
 
-            if response_pn.lower() == "no" or response_pn.lower() == "n":
+        if response_pn.lower() == "no" or response_pn.lower() == "n":
                 return "no"
 
-        if response_pn.lower() == "yes":
-            print(product_name)
+        
 
 product_name("List your product's name: ")
