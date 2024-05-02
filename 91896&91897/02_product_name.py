@@ -6,8 +6,8 @@ def product_name(question):
         response_pn = input(question)
 
         if response_pn.isalpha():
-            print("Added, were there anymore? ")
-
+            input("Added, were there anymore? ")
+        
             if response_pn.lower() == "yes" or response_pn.lower() == "y":
                 return "yes"
         
