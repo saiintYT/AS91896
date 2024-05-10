@@ -1,4 +1,4 @@
-#gettings users budget
+# getting users budget
 def get_budget():
     
     
@@ -9,10 +9,10 @@ def get_budget():
               return budget
               
           elif budget < 1.65:
-              print("Budget is too low. The Minimum budget is 1.65.")
+              print("Budget is too low. The minimum budget is 1.65.")
               
           else:
-              print("Budget is too high. The Maximum budget is 20.")
+              print("Budget is too high. The maximum budget is 20.")
               
       except ValueError:
           print("Invalid input. Please enter a valid number.")

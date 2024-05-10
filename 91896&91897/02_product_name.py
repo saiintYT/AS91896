@@ -1,6 +1,6 @@
+# getting users product name
 def product_name(question):
-    # getting users product name
-
+    
     while True:
 
         response_pn = input(question)
