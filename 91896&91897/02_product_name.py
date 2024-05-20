@@ -1,28 +1,39 @@
-# getting users product name
-def product_name(question):
-    
+def get_product_name():
     while True:
-
-        response_pn = input(question)
-
-        if response_pn.isalpha():
-            input("Added, were there anymore? ")
-        
-            if response_pn.lower() == "yes" or response_pn.lower() == "y":
-                return "yes"
-        
-        elif response_pn.lower() == "yes":
-            print(product_name)
-            
-        elif response_pn.lower() == "no":
-            print("All product names have been added.")
-        
+        product_name = input("Enter the product name: ").strip()
+        if product_name:
+            if all(char.isalpha() or char.isspace() for char in product_name):
+                return product_name
+            else:
+                print(
+                    "Invalid input. Please use only English alphabet letters and spaces."
+                )
         else:
-            print("Please only characters in the English alphabet.")
+            print("Product name cannot be empty.")
 
-        if response_pn.lower() == "no" or response_pn.lower() == "n":
-                return "no"
 
-        
+def main():
+    products = []
+    while True:
+        product = get_product_name()
+        if product:
+            products.append(product)
+            while True:
+                choice = input(
+                    "Do you want to add more products? (yes/no): ").lower()
+                if choice == 'yes' or choice == 'y':
+                    break
+                elif choice == 'no' or choice == 'n':
+                    print("All product names have been added.")
+                    print("List of products:")
+                    print("\n".join(products))
+                    exit()
 
-product_name("List your product's name: ")
+                else:
+                    print("Please enter 'yes' or 'no'.")
+
+
+if __name__ == "__main__":
+    main()
+
+    
