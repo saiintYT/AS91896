@@ -2,9 +2,6 @@
 
 
 # getting users budget
-
-
-# getting users budget
 def get_budget():
     
     
@@ -27,27 +24,46 @@ def get_budget():
 budget = get_budget()
 print("Your budget is:", budget)
 
-
 # getting users product name
-def product_name(question):
+def get_product_name():
+    while True:
+        product_name = input("Enter the product name: ").strip()
+        if product_name:
+            if all(char.isalpha() or char.isspace() for char in product_name):
+                return product_name
+            else:
+                print(
+                    "Invalid input. Please use only English alphabet letters and spaces."
+                )
+        else:
+            print("Product name cannot be empty.")
+
+
+def main():
+    products = []
+    while True:
+        product = get_product_name()
+        if product:
+            products.append(product)
+            while True:
+                choice = input(
+                    "Do you want to add more products? (yes/no): ").lower()
+                if choice == 'yes' or choice == 'y':
+                    break
+                elif choice == 'no' or choice == 'n':
+                    print("All product names have been added.")
+                    print("List of products:")
+                    print("\n".join(products))
+                    exit()
+
+                else:
+                    print("Please enter 'yes' or 'no'.")
+
+
+if __name__ == "__main__":
+    main()
+
     
-
-    response_pn = input("List your product's name: ")
-
-    if response_pn == str:
-        print("Added, were there anymore? ")
-
-        if response_pn == "yes".lower or "y".lower:
-            return "yes"
-        
-        elif response_pn == int:
-            print("Please only characters in the english alphabet.")
-
-        elif response_pn == "no".lower or "n".lower:
-            return "no"
-
-    if response_pn == "yes":
-        print(product_name)
 
 
 #def weight_g(question):
