@@ -1,14 +1,11 @@
 def get_product_name():
   while True:
       product_name = input("Enter the product name: ")
-      if product_name:
-          if all(char.isalpha() or char.isspace() for char in product_name):
+      if product_name.isalpha():
               return product_name
-          else:
-              print("Invalid input. Please use only English alphabet letters and spaces.")
       else:
-          print("Product name cannot be empty.")
-
+              print("Invalid input. Please use only English alphabet letters and spaces.")
+          
 def main():
   products = []
   while True:
