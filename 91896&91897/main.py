@@ -21,8 +21,7 @@ def get_budget():
           print("Invalid input. Please enter a valid number.")
 
 
-budget = get_budget()
-print("Your budget is:", budget)
+
 
 # getting users product name
 def get_product_name():
@@ -52,14 +51,62 @@ def main():
                   print("Please enter 'yes' or 'no'.")
 
 
+def get_weight():
+# getting users weight
+
+
+  while True:
+      try:
+          weight = float(input("What is your weight(in kg): "))
+          if 0 <= weight <= 50:
+              return weight
+              
+          elif weight <= 0:
+              print("Weight is too low. The minimum weight is 1.")
+              
+          else:
+              print("Weight is too high. The maximum weight you can enter is 50.")
+              
+      except ValueError:
+          print("Invalid input. Please enter a valid number.")
+
+
+weight = get_weight()
+print("The weight of {product_name} is:", weight)
+
+# getting users cost of products
+def get_price():
+    
+    
+  while True:
+      try:
+          price = float(input("What is your price: "))
+          if 0 <= price <= 2000:
+              return price
+              
+          elif price < 0:
+              print("Your price is too low. The minimum price is x.")
+              
+          else:
+              print("Your price is too high. The maximum price is x.")
+              
+      except ValueError:
+          print("Invalid input. Please enter a valid number.")
+
+
+
+# Main routine goes here
+budget = get_budget()
+print("Your budget is:", budget)
+
+product = get_product_name()
+print("Your product is:", product)
+
+weight = get_weight()
+print("The weight of {product_name} is:", weight)
+
+price = get_price()
+print("Your price is:", price)
+
 if __name__ == "__main__":
     main()
-
-    
-
-
-#def weight_g(question):
-    # getting users weight in grams
-#def weight_kg
-#def cost
-#def unit_price

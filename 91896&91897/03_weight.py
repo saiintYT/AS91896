@@ -4,7 +4,7 @@ def get_weight():
 
   while True:
       try:
-          weight = float(input("What is your weight(in kg): "))
+          weight = float(input("What is your weight (in kg): "))
           if 0 <= weight <= 50:
               return weight
               

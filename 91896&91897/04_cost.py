@@ -5,10 +5,10 @@ def get_price():
   while True:
       try:
           price = float(input("What is your price: "))
-          if 1.65 <= price <= 20:
+          if 0 <= price <= 2000:
               return price
               
-          elif budget < 1.65:
+          elif price < 0:
               print("Your price is too low. The minimum price is x.")
               
           else:
@@ -19,4 +19,4 @@ def get_price():
 
 
 price = get_price()
-print("Your budget is:", price)
+print("Your price is:", price)
